@@ -84,7 +84,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
     }
 
     /// <summary>
-    /// Compares the current and new values for a given property. If the value has changed,
+    /// Compares the current and new values for a given property. If the value is different,
     /// raises the <see cref="PropertyChanging"/> event, updates the property with the new
     /// value, then raises the <see cref="PropertyChanged"/> event.
     /// </summary>
@@ -122,7 +122,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
     }
 
     /// <summary>
-    /// Compares the current and new values for a given property. If the value has changed,
+    /// Compares the current and new values for a given property. If the value is different,
     /// raises the <see cref="PropertyChanging"/> event, updates the property with the new
     /// value, then raises the <see cref="PropertyChanged"/> event.
     /// See additional notes about this overload in <see cref="SetProperty{T}(ref T,T,string)"/>.
@@ -153,7 +153,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
     }
 
     /// <summary>
-    /// Compares the current and new values for a given property. If the value has changed,
+    /// Compares the current and new values for a given property. If the value is different,
     /// raises the <see cref="PropertyChanging"/> event, updates the property with the new
     /// value, then raises the <see cref="PropertyChanged"/> event.
     /// This overload is much less efficient than <see cref="SetProperty{T}(ref T,T,string)"/> and it
@@ -196,7 +196,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
     }
 
     /// <summary>
-    /// Compares the current and new values for a given property. If the value has changed,
+    /// Compares the current and new values for a given property. If the value is different,
     /// raises the <see cref="PropertyChanging"/> event, updates the property with the new
     /// value, then raises the <see cref="PropertyChanged"/> event.
     /// See additional notes about this overload in <see cref="SetProperty{T}(T,T,Action{T},string)"/>.
@@ -229,7 +229,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
     }
 
     /// <summary>
-    /// Compares the current and new values for a given nested property. If the value has changed,
+    /// Compares the current and new values for a given nested property. If the value is different,
     /// raises the <see cref="PropertyChanging"/> event, updates the property and then raises the
     /// <see cref="PropertyChanged"/> event. The behavior mirrors that of <see cref="SetProperty{T}(ref T,T,string)"/>,
     /// with the difference being that this method is used to relay properties from a wrapped model in the
@@ -302,7 +302,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
     }
 
     /// <summary>
-    /// Compares the current and new values for a given nested property. If the value has changed,
+    /// Compares the current and new values for a given nested property. If the value is different,
     /// raises the <see cref="PropertyChanging"/> event, updates the property and then raises the
     /// <see cref="PropertyChanged"/> event. The behavior mirrors that of <see cref="SetProperty{T}(ref T,T,string)"/>,
     /// with the difference being that this method is used to relay properties from a wrapped model in the
@@ -341,7 +341,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
 
     /// <summary>
     /// Compares the current and new values for a given field (which should be the backing
-    /// field for a property). If the value has changed, raises the <see cref="PropertyChanging"/>
+    /// field for a property). If the value is different, raises the <see cref="PropertyChanging"/>
     /// event, updates the field and then raises the <see cref="PropertyChanged"/> event.
     /// The behavior mirrors that of <see cref="SetProperty{T}(ref T,T,string)"/>, with the difference being that
     /// this method will also monitor the new value of the property (a generic <see cref="Task"/>) and will also
@@ -385,7 +385,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
 
     /// <summary>
     /// Compares the current and new values for a given field (which should be the backing
-    /// field for a property). If the value has changed, raises the <see cref="PropertyChanging"/>
+    /// field for a property). If the value is different, raises the <see cref="PropertyChanging"/>
     /// event, updates the field and then raises the <see cref="PropertyChanged"/> event.
     /// This method is just like <see cref="SetPropertyAndNotifyOnCompletion(ref TaskNotifier,Task,string)"/>,
     /// with the difference being an extra <see cref="Action{T}"/> parameter with a callback being invoked
@@ -410,7 +410,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
 
     /// <summary>
     /// Compares the current and new values for a given field (which should be the backing
-    /// field for a property). If the value has changed, raises the <see cref="PropertyChanging"/>
+    /// field for a property). If the value is different, raises the <see cref="PropertyChanging"/>
     /// event, updates the field and then raises the <see cref="PropertyChanged"/> event.
     /// The behavior mirrors that of <see cref="SetProperty{T}(ref T,T,string)"/>, with the difference being that
     /// this method will also monitor the new value of the property (a generic <see cref="Task"/>) and will also
@@ -449,7 +449,7 @@ public abstract class ObservableObject : INotifyPropertyChanged, INotifyProperty
 
     /// <summary>
     /// Compares the current and new values for a given field (which should be the backing
-    /// field for a property). If the value has changed, raises the <see cref="PropertyChanging"/>
+    /// field for a property). If the value is different, raises the <see cref="PropertyChanging"/>
     /// event, updates the field and then raises the <see cref="PropertyChanged"/> event.
     /// This method is just like <see cref="SetPropertyAndNotifyOnCompletion{T}(ref TaskNotifier{T},Task{T},string)"/>,
     /// with the difference being an extra <see cref="Action{T}"/> parameter with a callback being invoked
